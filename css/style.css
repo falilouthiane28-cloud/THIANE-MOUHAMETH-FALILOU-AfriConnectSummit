@@ -1,0 +1,26 @@
+/* RESET DE BASE */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* ROOT */
+:root{
+    --primary: #ffff;
+    --secondary: #000;
+    --tertiary: #6C4FDF;
+    --quatery: #F0F8FF;
+    --bg: #0f0f0f;
+}
+/* POLICE D'ECRITURE */
+body{
+    font-family: 'DM Sans';
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+h1,h2,h3,h4,h5{
+    font-family: 'Monserrat', sans-serif;
+}
+
