@@ -233,7 +233,8 @@ transition: 0.5s;
 
 .btn-vedette{
     display: inline-block;
-    margin-top: 20px;
+    margin-top: -20px;
+    margin-bottom: 20px;
    padding: 14px 30px ;
     border-radius: 30px;
     background-color: #6C4FDF;
@@ -870,4 +871,265 @@ box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
     border: none;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* RESPONSIVE TABLETTE */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 25px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+.nav-btn{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+}
+    .btn-mobile {
+        display: flex;
+        margin-left: 6px;
+        font-size: 1.5rem;
+        cursor:pointer ;
+    }
+.dar-mode,
+.btn-mobile{
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .hero {
+        padding: 110px 25px 50px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .stats-grid,
+    .vedette-grid,
+    .theme-grid,
+    .sec-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .raisons-container {
+        flex-wrap: wrap;
+    }
+
+    .raisons-card {
+        flex: 1 1 45%;
+    }
+
+
+    .sponsors-niveau {
+        flex-direction: column;
+    }
+
+    .niveau-titre {
+        flex: none;
+        width: 100%;
+    }
+
+    .sponsors-grid {
+        flex-wrap: wrap;
+    }
+
+    .sponsors-card {
+        flex: 1 1 40%;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .form,
+    .info {
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .tab {
+        flex-wrap: wrap;
+    }
+
+    .tab-content {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 650px;
+    }
+}
+
+/* RESPONSIVE MOBILE */
+
+@media (max-width: 480px) {
+
+    body {
+        overflow-x: hidden;
+    }
+    .stats,
+    .raisons,
+    .sponsors,
+    .theme,
+    .sec-carte,
+    .contact,
+    .faq {
+        padding: 45px 15px;
+    }
+    .navbar {
+        height: 70px;
+        padding: 10px 15px;
+    }
+
+    .navbar img {
+        width: 65px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 100px 15px 45px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-button {
+        flex-direction: column;
+    }
+    .btnh-1,
+    .btnh-2 {
+        width: 100%;
+    }
+
+    .counteurs {
+        flex-direction: column;
+        width: 100%;
+    }
+    .stats-grid,
+    .vedette-grid,
+    .theme-grid,
+    .sec-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .raisons-container {
+        flex-direction: column;
+    }
+    .stats-card,
+    .raisons-card,
+    .vedette-card,
+    .theme-card,
+    .sec-card {
+        width: 100%;
+        margin: 0;
+    }
+
+    .sec-card {
+        padding: 18px;
+    }
+
+    .sec-card img {
+        height: 280px;
+    }
+
+    .sponsors-grid {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .sponsors-card {
+        width: 100%;
+    }
+
+    .sponsors-card img,
+    .or .sponsors-card img,
+    .argent .sponsors-card img,
+    .bronze .sponsors-card img {
+        width: 100%;
+        max-width: 280px;
+        height: 100px;
+    }
+
+    .programme {
+        width: 100%;
+        margin: 40px auto;
+        padding: 0 15px;
+    }
+
+    .tab {
+        display: flex;
+
+        justify-content: flex-start;
+        gap: 8px;
+    }
+    .tab-container{
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .btn-tab {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    .tab-content {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 600px;
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        white-space: nowrap;
+    }
+
+    .filters button {
+        margin: 5px;
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .form,
+    .info {
+        padding: 20px;
+    }
+
+
+    .footer {
+        padding: 40px 15px 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-brand,
+    .footer-col,
+    .footer-contact {
+        width: 100%;
+    }
+
+    .map {
+        padding: 0 15px 50px;
+    }
+
+    .map iframe {
+        height: 280px;
+    }
 }
