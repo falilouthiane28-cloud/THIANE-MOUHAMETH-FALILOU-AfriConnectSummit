@@ -523,11 +523,11 @@ footer img{
     background: var(--tertiary);
     color: var(--primary);
  }
- .tab-content{
+ .tab-container{
     display: none;
  }
 
- .tab-content.active{
+ .tab-container.active{
     display: block;
  }
 
@@ -627,8 +627,8 @@ padding: 40px;
     font-weight: 700;
 }
 
-.filters button {
-    background-color: transparent;
+.filter-btn {
+    background: var(--quatery);
     border: 2px solid var(--tertiary);
     padding: 10px 20px;
     margin-bottom: 5px;
@@ -636,6 +636,15 @@ padding: 40px;
     font-size: 16px;
     font-weight: 500;
     margin-top: -20px;
+}
+.filter-btn :hover,
+.filter-btn.active{
+     background: var(--tertiary);
+    color: var(--primary);
+   
+} 
+.filter-btn.hide{
+    display: none;
 }
 
 /* SECTION VEDETTE */
@@ -701,7 +710,9 @@ padding: 40px;
     font-size: 14px;
     font-weight: 600;
 }
-
+.sec-card.non{
+    display: none;
+}
 
 /* CONTACT */
 
@@ -1248,4 +1259,8 @@ body.dark-mode p{
 .zoom-in.visible{
     opacity: 1;
     transform: none;
+}
+.erreur-message{
+    color: red;
+    font-size: 1rem;
 }
