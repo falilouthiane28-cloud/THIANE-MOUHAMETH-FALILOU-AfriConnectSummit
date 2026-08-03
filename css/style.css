@@ -49,10 +49,34 @@ h1,h2,h3,h4,h5{
     align-items: center;
     gap: 45px;
     list-style: none;
+    transition: 0.5s;
 }
 .nav-links a{
     color: var(--secondary);
     font-size: 1rem ;
+    position: relative;
+    transition: 0.3s;
+}
+.nav-links a:hover{
+    color: var(--tertiary);
+}
+.nav-links a.active{
+    color: var(--tertiary);
+}
+
+.nav-links a.actif::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: #6C4FDF;
+    border-radius: 5px;
+}
+.nav-links a.actif{
+    color: #6C4FDF;
+    font-weight: 600;
 
 }
 .nav-btn{
@@ -96,6 +120,7 @@ transition: 0.5s;
 }
 .hero-content{
     max-width: 900px;
+    animation: apparition 1s ease forwards;
 }
 .hero h1{
     font-family: 2rem;
@@ -147,6 +172,16 @@ transition: 0.5s;
 }
 .cont-box small{
     font-size: 1.5rem;
+}
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 /* STATS */
 .stats{
@@ -686,6 +721,7 @@ padding: 40px;
     border-radius: 16px;
     transition: 0.3s;
     margin-top: 20px;
+     transition: 0.5s;
 }
 .sec-card:hover{
     transform: translateY(-8px);
@@ -1260,6 +1296,7 @@ body.dark-mode p{
     opacity: 1;
     transform: none;
 }
+/* MESSAGE ERREUR JS */
 .erreur-message{
     color: red;
     font-size: 1rem;

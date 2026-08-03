@@ -74,25 +74,35 @@ if (backToTop) {
 
 // COMPTE A REBOUR EN TEMPS REEL
 const date = new Date("2026-11-20T09:00:00");
-
-setInterval(() => {
-    const temps = date - new Date();
-
-    const jours = Math.floor(temps / 86400000);
-    const heures = Math.floor((temps / 3600000) % 24);
-    const minutes = Math.floor((temps / 60000) % 60);
-    const secondes = Math.floor((temps / 1000) % 60);
- const joursElement=   document.getElementById("jours").textContent = jours;
- const heuresElement =   document.getElementById("heures").textContent = heures;
- const minutesElement =  document.getElementById("minutes").textContent = minutes;
- const secondesElement =   document.getElementById("second").textContent = secondes;
-}, 1000);
+const joursElement = document.getElementById("jours");
+const heuresElement = document.getElementById("heures");
+const minutesElement = document.getElementById("minutes");
+const secondesElement = document.getElementById("second");
+if (
+    joursElement &&
+    heuresElement &&
+    minutesElement &&
+    secondesElement
+) {
+    function updateCountdown() {
+        const temps = date - new Date();
+        const jours = Math.floor(temps / 86400000);
+        const heures = Math.floor((temps / 3600000) % 24);
+        const minutes = Math.floor((temps / 60000) % 60);
+        const secondes = Math.floor((temps / 1000) % 60);
+        joursElement.textContent = jours;
+        heuresElement.textContent = heures;
+        minutesElement.textContent = minutes;
+        secondesElement.textContent = secondes;
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+}
 
 // ANIMATIONS FADE-IN , SLIDE-LEFT, ZOOM-IN 
 const animatedElements = document.querySelectorAll(
     ".fade-in, .slide-in, .zoom-in"
 );
-
 if (animatedElements.length > 0) {
     const animationObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {

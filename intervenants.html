@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,18 +16,19 @@
 </head>
 <body>
     <header>
+        <!-- NAVBAR -->
            <nav class="navbar">
             <a href="index.html" class="logo">
                <img src="image/logo-event-removebg-preview.png" alt="logo-event " width="70px" height="auto">
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Acceuil</a></li>
-                <li><a href="programme.html">Programme</a></li>
-                <li><a href="intervenants.html">Intervenants</a></li>
+                <li><a href="programme.html" >Programme</a></li>
+                <li><a href="intervenants.html" class="actif">Intervenants</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="nav-btn">
-                <button class="dar-mode ">
+                <button class="dar-mode" id="theme-toggle">
                     <i class="bi bi-moon-stars"></i>
                 </button>
                 <button class="btn-mobile">
@@ -37,77 +38,80 @@
         </nav>
     </header>
     <main>
-        <section class="hero-interne">
+       <!-- SECTION FIL-ARIALE -->
+        <section class="hero-interne fade-in">
             <h1>Nos Intervenants </h1>
             <p><a href="index.html">Acceuil</a> > intervenants</p>
         </section> 
+          <!-- SECTION  FILTRAGE VEDETTE -->
         <section class="filtre">
-          
+        
              <div class="vedette-t">
                 <span>Expert et intervenants</span>
                 <h2>Nos Intervenants</h2>
                 <p>Découvrez les professionels qui partageront leur experience pendant AfriConnect Summit </p>
                  </div>
-            <div class="filters">
-                <button class="filter-btn active">Tous</button>
-                <button class="filter-btn">IA & Tech  </button>
-                <button class="filter-btn ">Business  </button>
-                <button class="filter-btn">Design </button>
-                <button class="filter-btn ">Data </button>
+            <div class="filters slide-in">
+                <button class="filter-btn active" data-filter="Tous">Tous</button>
+                <button class="filter-btn" data-filter="ia">IA & Tech  </button>
+                <button class="filter-btn " data-filter="business">Business  </button>
+                <button class="filter-btn" data-filter="design">Design </button>
+                <button class="filter-btn " data-filter="data">Data </button>
             </div>
                </section> 
-            
-                 <div class="sec-grid">
-               <div class="sec-card"> 
-                    <img src="image/profil-f.jpg" alt="">
+               <!-- SECTION CARD VEDETTE  -->
+            <section class="card"> 
+                 <div class="sec-grid ">
+               <div class="sec-card zoom-in" data-categori="ia"> 
+                    <img src="image/profil-f.jpg" alt="profil-vedette">
                     <h3>Amina Diallo</h3>
                     <p>Experte en IA</p>
                     <span>Sénégal</span>
                  </div>
-               <div class="sec-card"> 
+               <div class="sec-card zoom-in" data-categori="business"> 
                     <img src="image/profil-f2.jpg" alt="">
                     <h3>May Mensah</h3>
                     <p>entrepreneurs tech</p>
                     <span>Ghana </span>
                </div>
-                <div class="sec-card"> 
-                    <img src="image/profil-f3.jpg" alt="">
+                <div class="sec-card zoom-in" data-categori="design"> 
+                    <img src="image/profil-f3.jpg" alt="profil-vedette">
                     <h3>Fatou Ndiaye</h3>
                     <p>UI/UX Designer</p>
                     <span>Sénégal </span>
                  </div>
-               <div class="sec-card"> 
-                    <img src="image/profil-m5.jpg" alt="">
+               <div class="sec-card zoom-in" data-categori="data"> 
+                    <img src="image/profil-m5.jpg" alt="profil-vedette">
                     <h3>Ibrahim Koné</h3>
                     <p>Data Scientist</p>
                     <span>cote d'Ivoire </span>
                 </div>
-            <div class="sec-card"> 
-                    <img src="image/profil-f6.jpg" alt="">
+            <div class="sec-card zoom-in" data-categori="ia"> 
+                    <img src="image/profil-f6.jpg" alt="profil-vedette">
                     <h3>Sarah Diop</h3>
                     <p>Ingénieure Machine Learning </p>
                     <span>Mali</span>
                  </div>
-               <div class="sec-card"> 
-                    <img src="image/profil-f5.jpg" alt="">
+               <div class="sec-card zoom-in" data-categori="business"> 
+                    <img src="image/profil-f5.jpg" alt="profil-vedette">
                     <h3>Grace Owusu</h3>
                     <p>investisseuse Startup</p>
                     <span>Ghana </span>
              </div>
-              <div class="sec-card">
-                    <img src="image/profil-m4.jpg" alt="">
+              <div class="sec-card zoom-in" data-categori="design">
+                    <img src="image/profil-m4.jpg" alt="profil-vedette">
                     <h3>Jean Bemba </h3>
                     <p>Product Designer</p>
                     <span>RDC</span>
                  </div>
-             <div class="sec-card"> 
-                    <img src="image/profil-m3.jpg" alt="">
+             <div class="sec-card zoom-in" data-categori="data"> 
+                    <img src="image/profil-m3.jpg" alt="profil-vedette">
                     <h3>David Nguessan </h3>
                     <p> cloud Architect</p>
                     <span>cote d'ivoire </span>
              </div>
-                <div class="sec-card"> 
-                    <img src="image/profil-f7.jpg" alt="">
+                <div class="sec-card zoom-in" data-categori="ia"> 
+                    <img src="image/profil-f7.jpg" alt="profil-vedette">
                     <h3>Linda Kamara </h3>
                     <p>Experte en Robotique</p>
                     <span>Sierra Leone </span>
@@ -115,7 +119,7 @@
             </div>
         </section>
                  </main>
-
+<!-- FOOTER -->
   <footer class="footer">
 
     <div class="footer-container">
@@ -155,10 +159,9 @@
             <p><i class="bi bi-envelope"></i> contact@africonnect.com</p>
             <p><i class="bi bi-telephone"></i> +221 78 427 72 29</p>
 
-            <!-- <button id="back-to-top">
-                <i class="bi bi-arrow-up"></i>
-            </button> -->
-
+           <button class="back-to-top" id="back-to-top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
         </div>
 
     </div>
@@ -166,7 +169,7 @@
     <div class="footer-bottom">
 
         <p>
-            <span id="year"></span> AfriConnect Summit.
+           &copy;   <span id="year"></span> AfriConnect Summit.
             Tous droits réservés.
         </p>
 
